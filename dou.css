@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+html{
+    font-family:sans-serif;
+}
+:root{
+    --verdegay:rgba(40,167,87,1);
+
+}
+.barra{
+    background: var(--verdegay);
+    width: 100%;
+    height:5rem;
+
+}
