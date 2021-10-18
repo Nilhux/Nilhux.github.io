@@ -1,18 +1,62 @@
 *{
     box-sizing: border-box;
-    margin:0;
-    padding: 0;
+    margin:0px;
+    padding: 0px;
 }
 html{
-    font-family:sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 :root{
     --verdegay:rgba(40,167,87,1);
-
+    --verdemugroso: #1c5713;
 }
-.barra{
-    background: var(--verdegay);
+header{
+    background-color:var(--verdegay);
     width: 100%;
-    height:5rem;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height:33.33vh;
+}
 
+.botonhp{
+    flex-direction: column;
+    display: flex;
+    align-items:flex-end ;
+    margin:10px 10px;
+    justify-content: space-evenly;
+}
+.logo{
+    width: 50%;
+    padding:10px;
+    height: 60%;
+    margin:auto 0;
+    border-radius: 15%;
+}
+.admisiones{
+    background-color: var(--verdemugroso);
+    padding: 0 5px;
+    border-radius: 5%;}
+.admisiones:hover{
+    background-color: var(--verdegay);
+    padding: 0 5px;}
+.admisiones:active{
+    background-color: red;
+    padding: 0 5px;}
+
+a {
+    color:white;
+    text-decoration: none;
+
+    display: flex;
+    height:auto;
+}
+main img{
+    width:100%;
+    height:33.33vh;
+}
+.herramientas{
+    width:100%;
+    height:33.33vh;
 }
