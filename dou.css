@@ -8,10 +8,12 @@ html{
 }
 header{
     display: flex;
-    background-color:olive;
+    background-color:darkred;
     justify-content: center;
     padding: 1em 0;
+    color: white;
 }
+
 .cuadrado{
     display: flex;
     flex-direction: column;
