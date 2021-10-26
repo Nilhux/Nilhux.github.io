@@ -48,15 +48,67 @@ header{
 a {
     color:white;
     text-decoration: none;
-
     display: flex;
     height:auto;
 }
+
+/*pag1*/
 main img{
     width:100%;
     height:33.33vh;
 }
 .herramientas{
     width:100%;
-    height:33.33vh;
+    height:275px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.herramientas a img{
+    width: 75%;
+    height: 4em;
+    margin:5px;
+    border-radius: 10%;
+}
+/*pag2*/
+.nosotres{
+    height:30em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+
+}
+.nos{
+    margin: 0 auto 7.5%;
+}
+
+.servicios{
+    width: 100%;
+    height:60vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: lightgray;
+}
+.servicios div a img{
+    width:9em;
+    flex-wrap: wrap;
+    height:9em;
+    margin:auto;
+}
+.ser{
+    display: flex;
+    margin: 0 auto;
+
+}
+.servicios div{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items:stretch;
 }
