@@ -12,7 +12,10 @@ const calcularPerimetroCuadrado =()=>{
     let valor1 = parseInt(etiqueta1.value);
     let valor2 = parseInt(etiqueta2.value);
     let perimetro = calcularPerimetro(valor1,valor2);
-    alert(`Tu perimetro es de ${perimetro} cm`)
+    if(valor1 = undefined){
+        alert("gay")
+    }
+  alert(`Tu perimetro es de ${perimetro} cm`)
 }
 
 const calcularAreaCuadrada =()=>{
@@ -23,3 +26,26 @@ const calcularAreaCuadrada =()=>{
     let area = calcularArea(valor1,valor2);
     alert(`Tu area es de ${area} cm2`)
 }
+
+guardarNombre="a";
+
+const persona =()=>{
+    guardarNombre = "Nombre";
+    return{
+        getName:()=>{
+            alert (`tu nombre es ${guardarNombre}`);},
+
+        setName:(nombre)=>{
+            guardarNombre = nombre;
+        }
+        }
+    }
+nuevaPersona = persona();
+
+ponerNombre=()=>{
+    let ig = document.getElementById("nombrehp")
+    let valor = ig.value;
+    nuevaPersona.setName(valor)
+    nuevaPersona.getName()
+    }
+
