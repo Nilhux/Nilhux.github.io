@@ -42,26 +42,60 @@ const funcionDescuento = ()=>{
     }
 }
 
-
-const quintana = {
-    nombre: "Kevin",
-    apellido: "Quintana",
-    edad: 13,
-    clasesAprobadas: [
-        "Matemáticas",
-        "Lenguaje",
-        "Ingles"
-    ],
-    aprobarCurso(claseAprobada){
-        this.clasesAprobadas.push(claseAprobada)
+class estudiante{
+    constructor({
+        nombre,
+        email,
+        usuario,
+        twitter = undefined,
+        instagram = undefined,
+        cursosAprovados = [],
+        rutasDeAprendizaje = []
+    }){
+        this.nombre = nombre;
+        this.email = email;
+        this.usuario = usuario;
+        this.redesSociales = {
+            twitter,
+            instagram,
+        }
+        this.cursosAprovados = cursosAprovados;
+        this.rutasDeAprendizaje = rutasDeAprendizaje;
     }
 }
-function estudiante(nombre,edad,clasesAprobadas){
-    this.nombre = nombre;
-    this.edad = edad;
-    this.clasesAprobadas = clasesAprobadas;
+class rutasDeAprendizaje{
+    constructor({
+        id,
+        nombre,
+        cursos = []
+    }){
+        this.id = id;
+        this.nombre = nombre;
+        this.cursos = cursos;
+    }
 }
-estudiante.prototype.aprobarClase = function(claseAprobada){
-    this.clasesAprobadas.push(claseAprobada)
+class cursos{
+    constructor( id, nombre,profesor ){
+        this.id = id,
+        this.nombre = nombre;
+        this.profesor = profesor;
+    }
 }
-var nis = new estudiante("Nicolas Sua Cruz", 16,["Ingles", "Matemáticas", "Lenguaje", "Ingles", "Sociales"])
+const python = new cursos({
+    id: "python",
+    nombre: "python",
+    profesor: "Kevin Quintana"
+})
+const rutaPython = new rutasDeAprendizaje({
+    id: "Ruta python",
+    name: "Ruta python",
+    cursos: [python]
+})
+
+const Alfredo = new estudiante({
+    nombre: "Alfredo",
+    usuario: "AlonsoGamer666",
+    email: "bruh@gmail.com",
+    instagram: "supernene.elsingueson",
+    rutasDeAprendizaje: [rutaPython]
+})
