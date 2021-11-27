@@ -42,60 +42,17 @@ const funcionDescuento = ()=>{
     }
 }
 
-class estudiante{
-    constructor({
-        nombre,
-        email,
-        usuario,
-        twitter = undefined,
-        instagram = undefined,
-        cursosAprovados = [],
-        rutasDeAprendizaje = []
-    }){
-        this.nombre = nombre;
-        this.email = email;
-        this.usuario = usuario;
-        this.redesSociales = {
-            twitter,
-            instagram,
-        }
-        this.cursosAprovados = cursosAprovados;
-        this.rutasDeAprendizaje = rutasDeAprendizaje;
+const juan = {
+    nombre: "juanito",
+    edad: 18,
+    cursosAprovados: ["Curso x"],
+    aprovarCurso(cursoAprovado){
+        this.cursosAprovados.push(cursoAprovado)
     }
 }
-class rutasDeAprendizaje{
-    constructor({
-        id,
-        nombre,
-        cursos = []
-    }){
-        this.id = id;
-        this.nombre = nombre;
-        this.cursos = cursos;
-    }
-}
-class cursos{
-    constructor( id, nombre,profesor ){
-        this.id = id,
-        this.nombre = nombre;
-        this.profesor = profesor;
-    }
-}
-const python = new cursos({
-    id: "python",
-    nombre: "python",
-    profesor: "Kevin Quintana"
-})
-const rutaPython = new rutasDeAprendizaje({
-    id: "Ruta python",
-    name: "Ruta python",
-    cursos: [python]
-})
-
-const Alfredo = new estudiante({
-    nombre: "Alfredo",
-    usuario: "AlonsoGamer666",
-    email: "bruh@gmail.com",
-    instagram: "supernene.elsingueson",
-    rutasDeAprendizaje: [rutaPython]
+Object.defineProperty(juan, "sexo",{
+    value: "hombre",
+    writable: false,
+    configurable: false,
+    enumerable: true,
 })

@@ -26,7 +26,7 @@ html{
     margin: 1rem;
     font-size: 2rem;
 }
-.formulario div{
+.pregunta div{
     display: flex;
     flex-direction: column;
     margin: 0.5rem 0;
@@ -45,6 +45,8 @@ html{
     color: white;
     border-style:none;
     background-color: rgb(60, 175, 31);
+    padding: 0 1rem;
+    width: 15rem;
 }
 .boton:hover{
     cursor:pointer;
@@ -63,4 +65,21 @@ html{
 .footer{
     display: flex;
     align-items: flex-end;
+}
+.cajaBoton{
+    display: flex;
+    justify-content: center;
+}
+@media(min-width: 1024px){
+
+    .pregunta{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .input{
+        height: 4rem;
+        border-radius: 10px;
+        width: 25rem;
+    }
+
 }

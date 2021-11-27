@@ -16,20 +16,25 @@
 </header>  
 <main>
     <form action="#" class="formulario"> 
-        <div>   
-            <label for="precio">Precio original:</label>
-            <input type="text" id="precio" placeholder="Escribe el precio original"     class="input" required>
+        <div class="pregunta">
+            <div>   
+                <label for="precio">Precio original:</label>
+                <input type="text" id="precio" placeholder=" Escribe el precio original"     class="input" required>
+            </div>
+            <div>
+                <label for="descuento">Descuento:</label>
+                <input type="text" class="input" id="descuento" placeholder=" Escribe el descuento" required>
+            </div>
+            <div>    
+                <label for="cupones">Cupones:</label>
+                <input type="text" id="cupones" class="input" placeholder=" Escibe tu cupon (opcional)">
+            </div>
         </div>
-        <div>
-            <label for="descuento">Descuento:</label>
-            <input type="text" class="input" id="descuento" placeholder="Escribe el descuento" required>
-        </div>
-        <div>    
-            <label for="cupones">Cupones:</label>
-            <input type="text" id="cupones" class="input" placeholder="Escibe tu cupon (opcional)">
+        <div class="cajaBoton">
+            <button type="submit" class="boton"
+            onclick="funcionDescuento()">Calcular Precio</button>
         </div>    
-        <button type="submit" class="boton"
-        onclick="funcionDescuento()">Calcular Precio</button>
+        
     </form>
     <div class="textoSocial">
         <p id="textoSocial"></p>
