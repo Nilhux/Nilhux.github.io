@@ -56,3 +56,55 @@ Object.defineProperty(juan, "sexo",{
     configurable: false,
     enumerable: true,
 })
+
+const mamarre = (lastNumber)=>{
+    number = 1;
+    pastAnswer = 1
+    console.log(`${number}! = ${pastAnswer}`)
+    while (number < lastNumber){
+        number++
+        answer = pastAnswer * number
+        pastAnswer = answer
+        console.log(`${number}! = ${answer}`)
+
+    }
+}
+class students{
+    constructor({
+        name,
+        age,
+        socialMedia = {
+            twitter,
+            instagram,
+            facebook,
+        },
+
+    }){
+        this.socialMedia = socialMedia;
+        this.age = age;
+        this._name = name
+        
+    }
+    get name(){
+        return this._name
+    }
+
+    set name(newName){
+        if (newName != "nigga"){
+            this._name = newName
+        }
+        else{
+            console.error(":v")
+        }
+    }
+}
+
+
+const peter = new students({
+    name:"Peter Parker",
+    age: 13,
+    socialMedia:{
+        facebook: "joemamagay",
+        twitter: "hatersKevinQuintana"
+    }
+})
