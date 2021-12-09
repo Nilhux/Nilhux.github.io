@@ -34,19 +34,13 @@ def main():
 #     "Argentina": 44_937_712
 
 # }
-    def factorial(n):
-        """Calcula el factorial de n
-        
-        n int > 0
-        return n!
-        """
-        if n == 1:
-            return 1
 
-        return n * factorial(n - 1)
+    nombre = input("Escribe un nombre: ")
+    assert len(nombre) > 0, "Debes escribir un nombre valido"
+    print(f"Tu nombre es {nombre}")
 
-    n = int(input("Escribe un numero entero: "))
-    print(factorial(n))
+    print(5/'Platzi')
+
 
 if __name__ == "__main__":
     main()

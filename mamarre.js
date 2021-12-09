@@ -29,23 +29,27 @@ const calcularAreaCuadrada =()=>{
 
 guardarNombre="a";
 
-const persona =()=>{
-    guardarNombre = "Nombre";
-    return{
-        getName:()=>{
-            alert (`tu nombre es ${guardarNombre}`);},
-
-        setName:(nombre)=>{
-            guardarNombre = nombre;
-        }
-        }
+function createStudent({
+    name,
+    age,
+    socialMedia = {
+        facebook,
+        instagram,
+        reddit
     }
-nuevaPersona = persona();
-
-ponerNombre=()=>{
-    let ig = document.getElementById("nombrehp")
-    let valor = ig.value;
-    nuevaPersona.setName(valor)
-    nuevaPersona.getName()
+}){
+    return {
+        name,
+        age,
+        socialMedia
     }
+}
 
+const obama = createStudent({
+    name: "obamaman",
+    age: 69,
+    socialMedia:{
+        facebook:"hawaii"
+        
+    }
+})
