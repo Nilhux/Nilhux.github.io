@@ -117,13 +117,29 @@ def main():
     # except ValueError:
     #     print("Debes ingresar un numero ")
 
-    def read():
-        pass
+# def run():
+#     def read():
+#         numbers = []
+#         with open("./numbers.txt","r", encoding="utf-8")as f:
+#             for line in f:
+#                 numbers.append(int(line))
+#         print(numbers)
 
-    def write():
-        pass
+#     def write():
+#         names = ["elpepe","etesech","potaxio","tilin","mi pana miguel"]
+#         allnames = []
+#         with open("./numbers.txt","r+",encoding="utf-8")as f:
+#             for name in names:
+#                 f.write(name)
+#                 f.write("""
 
+# """
+#                 )
+#             for line in f:
+#                 allnames.append(line)
+#         print(allnames)
 
+    pass
 
 if __name__ == "__main__":
     main()
