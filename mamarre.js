@@ -42,69 +42,177 @@ const funcionDescuento = ()=>{
     }
 }
 
-const juan = {
-    nombre: "juanito",
-    edad: 18,
-    cursosAprovados: ["Curso x"],
-    aprovarCurso(cursoAprovado){
-        this.cursosAprovados.push(cursoAprovado)
-    }
-}
-Object.defineProperty(juan, "sexo",{
-    value: "hombre",
-    writable: false,
-    configurable: false,
-    enumerable: true,
-})
+// const juan = {
+//     nombre: "juanito",
+//     edad: 18,
+//     cursosAprovados: ["Curso x"],
+//     aprovarCurso(cursoAprovado){
+//         this.cursosAprovados.push(cursoAprovado)
+//     }
+// }
+// Object.defineProperty(juan, "sexo",{
+//     value: "hombre",
+//     writable: false,
+//     configurable: false,
+//     enumerable: true,
+// })
 
-const mamarre = (lastNumber)=>{
-    number = 1;
-    pastAnswer = 1
-    console.log(`${number}! = ${pastAnswer}`)
-    while (number < lastNumber){
-        number++
-        answer = pastAnswer * number
-        pastAnswer = answer
-        console.log(`${number}! = ${answer}`)
+// const mamarre = (lastNumber)=>{
+//     number = 1;
+//     pastAnswer = 1
+//     console.log(`${number}! = ${pastAnswer}`)
+//     while (number < lastNumber){
+//         number++
+//         answer = pastAnswer * number
+//         pastAnswer = answer
+//         console.log(`${number}! = ${answer}`)
 
-    }
+//     }
+// }
+// class students{
+//     constructor({
+//         name,
+//         age,
+//         twitter,
+//         instagram,
+//         facebook,
+//         approvedClasses = []
+
+//     }){
+//         this.socialMedia = {
+//             twitter,
+//             instagram,
+//             facebook
+//         };
+//         this.name = name
+//         this.age = age
+
+//         // let private = {
+//         //     "_approvedClasses":approvedClasses
+//         // }
+
+//         Object.defineProperty(this, "approvedClasses",{
+//             get(){
+//                 return private["_approvedClasses"]
+//             },
+//             set(approvedClass){
+//                 private["_approvedClasses"].push(approvedClass)
+//             }
+//         })
+//     }
+//     get name(){
+//         return this._name
+//     }
+
+//     set age(newAge){
+//         if (newAge > this.age){
+//             this.age = newAge
+//         }
+    
+//         else{
+//             console.error(":v")
+//         }
+//     }
+// }
+function estudiante({
+    nombre,edad
+}){
+    Object.defineProperty
+    return 
 }
-class students{
+
+// const peter = new students({
+//     name:"Peter Parker",
+//     age: 13,
+//     socialMedia:{
+//         facebook: "joemamagay",
+//         twitter: "hatersKevinQuintana"
+//     }
+// })
+
+    // Cambio de sintaxis para crear instancias, nose lol
+
+class Person{
     constructor({
         name,
         age,
-        socialMedia = {
-            twitter,
-            instagram,
-            facebook,
-        },
-
+        email,
+        whatsapp,
+        instagram,
+        twitter
     }){
-        this.socialMedia = socialMedia;
-        this.age = age;
-        this._name = name
-        
-    }
-    get name(){
-        return this._name
+        this.name = name,
+        this.age = age,
+        this.email = email
+        this.socialMedia = {
+            whatsapp,
+            instagram,
+            twitter
+        }
+        Object.defineProperty(this, "name",{
+            writable: false,
+            configurable: false
+        })
     }
 
-    set name(newName){
-        if (newName != "nigga"){
-            this._name = newName
-        }
-        else{
-            console.error(":v")
-        }
+    
+}
+
+class Teacher extends Person{
+    constructor(props,classes){
+        super(props)
+        this.classes = [classes]
     }
 }
 
+class Student extends Person{
+    constructor(props,approvedClasses){
+        super(props)
+        this.approvedClasses = approvedClasses
 
-const peter = new students({
-    name:"Peter Parker",
-    age: 13,
-    socialMedia:{
-        facebook: "joemamagay",
-        twitter: "hatersKevinQuintana"
+        Object.defineProperty(this, "approvedClasses",{
+            configurable: false,
+            writable: false
+        })
     }
+}
+
+class Classes{
+    constructor({
+        name,
+        description
+    }){
+        this.name = name,
+        this.description = description
+    }
+}
+
+const Artes = new Classes({
+    name:"Artes",
+    description: "clase para hacer cosas artisticas jaja i critica"
 })
+
+const Etica = new Classes({
+    name: "Etica"
+})
+
+const DianaGomez = new Teacher({
+    name: "Diana Gomez",
+    age: 93,
+    email: "Dianasex@gmail.com",
+    classes: [
+        Artes
+    ]
+    
+})
+
+class Classroom{
+    constructor({
+        teacher,
+        students
+    }){
+        this.teacher = teacher
+        this.students = students
+    }
+}
+
