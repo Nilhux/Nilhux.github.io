@@ -29,27 +29,3 @@ const calcularAreaCuadrada =()=>{
 
 guardarNombre="a";
 
-function createStudent({
-    name,
-    age,
-    socialMedia = {
-        facebook,
-        instagram,
-        reddit
-    }
-}){
-    return {
-        name,
-        age,
-        socialMedia
-    }
-}
-
-const obama = createStudent({
-    name: "obamaman",
-    age: 69,
-    socialMedia:{
-        facebook:"hawaii"
-        
-    }
-})
