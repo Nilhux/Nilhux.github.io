@@ -1,28 +1,62 @@
-class Carro:
-    def __init__(self,año,marca,color,motor):
-        self.__año = año
-        self.__marca = marca
-        self.__color = color
-        self.__motor = motor
+import random
 
-    @property
-    def marca(self):
-        return self.__marca
-
-    @marca.setter
-    def marca(self,nueva_marca):
-        self.__marca = nueva_marca
-
-
-bmw_generic_car = Carro(año="2025",marca="BMW",color="negro",motor="BMW motor nose jajaj")
-print(bmw_generic_car.marca)
+def main():
+    def busqueda_lineal(lista, objetivo):
+        match = False
+        iteraciones = 0
+        for element in lista:
+            iteraciones += 1
+            if element == objetivo:
+                match = True
+                break
+        print(f"Iteraciones busqueda lineal: {iteraciones}")
+        return match
 
 
-class Carro_electrico(Carro):
-    def __init__(self, año, marca, color, bateria,motor):
-        super().__init__(año, marca, color,motor)
-        self.bateria = bateria
+    def busqueda_binaria(lista,comienzo, final, objetivo,iteraciones=0):
+        iteraciones += 1
+        if comienzo > final:
+            return (False,iteraciones)
 
-S_model = Carro_electrico(año="2012",marca="Tesla",bateria="500v",color="rojo",motor="mcdonalds motor")
+        medio = (comienzo + final)//2
 
-print(S_model.__marca)
+
+        if lista[medio] == objetivo:
+            return (True,iteraciones)
+
+        elif lista[medio] < objetivo:
+            return busqueda_binaria(lista,medio + 1,final,objetivo,iteraciones)
+        elif lista[medio] > objetivo:
+            return busqueda_binaria(lista,comienzo,medio - 1,objetivo,iteraciones)
+        return iteraciones
+
+
+    def ordenamiento_de_burbuja(lista):
+        n = len(lista)
+
+        for i in range(n):
+            for j in range(0, n - i - 1):
+                if lista[j] > lista[j + 1]:
+                    lista[j],lista[j + 1] = lista[j + 1],lista[j]
+        return lista
+
+    lista_ordenada = ordenamiento_de_burbuja
+
+    tamano_de_lista = int(input("Tamaño de la lista: "))
+    objetivo = int(input("Que numero quieres encontrar?: "))
+
+    lista = [random.randint(0,500) for i in range(tamano_de_lista)]
+
+    lista_ordenada = ordenamiento_de_burbuja(lista)
+    print(lista_ordenada)
+
+    encontrado = busqueda_lineal(lista_ordenada,objetivo)
+    (encontrado2,iteraciones2) = busqueda_binaria(lista_ordenada, 0 , len(lista), objetivo)
+
+    print(f"Iteraciones busqueda binaria: {iteraciones2} ")
+    print(lista)
+    print(f'El numero {objetivo} {"esta" if encontrado else" no esta"} en la lista')
+
+
+if __name__ == "__main__":
+    main()
