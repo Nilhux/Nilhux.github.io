@@ -1,5 +1,4 @@
-
-*.jav
-*.py
+contenidoAudiovisual/
 venv
-
+*.jav
+numbers.txt

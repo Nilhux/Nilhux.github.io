@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Shippori Antique', sans-serif;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 20vh;
+    padding: 0 3.5rem;
+    font-size: 3rem;
+    color: white;
+    background-color:darkcyan;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    margin: 1rem;
+    font-size: 2rem;
+}
+.pregunta div{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0;
+}
+.input{
+    border-color:rgb(228, 227, 227);
+    border-style:solid;
+    border-width: 2px;
+    height: 3rem;
+    background-color: rgb(228, 227, 227);
+}
+.boton{
+    margin: 1.5rem 3rem;
+    height: 3.5rem;
+    border-radius: 5px;
+    color: white;
+    border-style:none;
+    background-color: rgb(60, 175, 31);
+    padding: 0 1rem;
+    width: 15rem;
+}
+.boton:hover{
+    cursor:pointer;
+}
+.boton:active{
+    background:greenyellow;
+}
+.textoSocial{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}
+.textoSocial p{
+    text-align: center;
+}
+.footer{
+    display: flex;
+    align-items: flex-end;
+}
+.cajaBoton{
+    display: flex;
+    justify-content: center;
+}
+@media(min-width: 1024px){
+
+    .pregunta{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .input{
+        height: 4rem;
+        border-radius: 10px;
+        width: 25rem;
+    }
+
+}
