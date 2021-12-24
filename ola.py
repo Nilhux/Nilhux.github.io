@@ -139,7 +139,8 @@ def main():
 #                 allnames.append(line)
 #         print(allnames)
 
-    pass
+    lista = [1,2,3,4,5,2,6,7,8,9,2]
+    print(lista.count(2))
 
 if __name__ == "__main__":
     main()
