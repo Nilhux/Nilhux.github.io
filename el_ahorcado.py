@@ -3,7 +3,7 @@ import os
 
 def choose_word():
     words = []
-    with open("./numbers.txt","r", encoding="utf-8")as n:
+    with open("./names.txt","r", encoding="utf-8")as n:
         for word in n:
             words.append(word)
     enumeration  = list(enumerate(words))
