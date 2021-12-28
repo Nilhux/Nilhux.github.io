@@ -40,7 +40,6 @@ p:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-color: rgb(233, 58, 58);
     border-width: 3px;
     border-style:solid;
     font-size: 3rem;
