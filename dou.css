@@ -65,7 +65,7 @@ p:hover{
 
 main{
     display: flex;
-    justify-content: center;
+    justify-content:space-evenly;
 }
 
 .cellphone{
