@@ -40,13 +40,46 @@ def main():
                     lista[j],lista[j + 1] = lista[j + 1],lista[j]
         return lista
 
-    lista_ordenada = ordenamiento_de_burbuja
+    def ordenamiento_por_mezcla(lista):
+        if len(lista) > 1:
+            medio = len(lista) // 2
+            izquierda = lista[:medio]
+            derecha = lista[medio:]
+
+            ordenamiento_por_mezcla(izquierda)
+            ordenamiento_por_mezcla(derecha)
+
+            i = 0
+            j = 0
+            k = 0
+
+            while i < len(izquierda) and j < len(derecha):
+                if izquierda[i] < derecha[j]:
+                    lista[k] = izquierda[i]
+                    i += 1
+            else:
+                lista[k] = derecha[j]
+                j += 1
+            k += 1
+
+            while i < len(izquierda):
+                lista[k] = izquierda[i]
+                i += 1
+                k += 1
+            while j < len(derecha):
+                lista[k] = derecha[j]
+                j += 1
+                k += 1
+
+        return lista
+
 
     tamano_de_lista = int(input("Tamaño de la lista: "))
     objetivo = int(input("Que numero quieres encontrar?: "))
 
     lista = [random.randint(0,500) for i in range(tamano_de_lista)]
 
+    print(lista)
     lista_ordenada = ordenamiento_de_burbuja(lista)
     print(lista_ordenada)
 
@@ -54,7 +87,6 @@ def main():
     (encontrado2,iteraciones2) = busqueda_binaria(lista_ordenada, 0 , len(lista), objetivo)
 
     print(f"Iteraciones busqueda binaria: {iteraciones2} ")
-    print(lista)
     print(f'El numero {objetivo} {"esta" if encontrado else" no esta"} en la lista')
 
 
