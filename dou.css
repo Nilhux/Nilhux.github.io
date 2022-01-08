@@ -84,7 +84,7 @@ main{
     height: 2.5%;
     width: 100%;
 }
-.screen{
+.spreen{
     display: flex;
     height: 91.5%;
     width: 100%;
@@ -92,7 +92,7 @@ main{
     align-items: center;
 }
 
-.screen p{
+.spreen p{
     font-size: 4rem;
 }
 

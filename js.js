@@ -19,3 +19,20 @@ switch(false){
     case false: console.log("soy falso");
     case true: console.log("soy true")
 }
+
+function crearPersona({
+    nombre,
+    edad,
+    sexo,
+}){
+    const private = {
+        "_nombre" : nombre,
+    };
+    const public = {
+        edad: edad,
+        sexo: sexo
+    };
+
+    
+    return public
+}
