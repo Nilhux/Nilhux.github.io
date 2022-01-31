@@ -1,4 +1,5 @@
 from functools import reduce
+import os
 
 def main():
 #     DATA = [
@@ -139,9 +140,74 @@ def main():
 #                 allnames.append(line)
 #         print(allnames)
 
-    lista = [1,2,3,4,5,2,6,7,8,9,2]
-    print(lista.count(2))
+    def verify(lista, objetivo):
+        for i in lista:
+            if i == objetivo:
+                continue
+            try:
+                i = int(i)
+            except ValueError:
+                continue
+            else:
+                print("tetas")
+                return False
+        return True       
 
+
+    def suma():
+        print("""
+SUMA""")
+        number1 = int(input("Escoge el primer numero: "))
+        number2 = int(input("Escoge el segundo numero: "))
+        print(f"El resultado es {number1 + number2}")
+
+    def resta():
+        print("""
+RESTA""")
+        number1 = int(input("Escoge el primer numero: "))
+        number2 = int(input("Escoge el segundo numero: "))
+        print(f"El resultado es {number1 - number2}")
+
+    def multiplicacion():
+        print("""
+MULTIPLICACION""")
+        number1 = int(input("Escoge el primer numero: "))
+        number2 = int(input("Escoge el segundo numero: "))
+        print(f"El resultado es {number1 * number2}")
+
+    def division():
+        print("""
+DIVISION""")
+        number1 = int(input("Escoge el primer numero: "))
+        number2 = int(input("Escoge el segundo numero: "))
+        print(f"El resultado es {number1 / number2}")
+
+
+
+    def show():
+        os.system("clear")
+        operacion = list(input("""Calculadora
+        1- Sumar
+        2- Restar
+        3- Multiplicar
+        4- Dividir
+        
+        Selecciona una opcion: """))
+
+        if "1" in operacion and verify(operacion,"1"):
+            suma()
+        elif "2" in operacion and verify(operacion,"2"):
+            resta()
+        elif "3" in operacion and verify(operacion,"3"):
+            multiplicacion()
+        elif "4" in operacion and verify(operacion,"4"):
+            division()
+        else:
+            show()
+
+
+    show()
+        
 if __name__ == "__main__":
     main()
  
