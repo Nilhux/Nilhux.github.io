@@ -1,6 +1,16 @@
+<<<<<<< HEAD
 *.txt
+=======
+<<<<<<< HEAD
+
+>>>>>>> 53670be1ffaa459fa2c6137eef431e6e72f40065
 *.jav
 *.png
 venv
 python
 
+=======
+*.svg
+*.png
+*.jpg
+>>>>>>> 18b1fb54205e9fa9e8240872a95473518831343a
